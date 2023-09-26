@@ -808,6 +808,10 @@ function _Chat() {
       return;
     }
 
+    // Delete the following messages
+    const followingMessages = session.messages.slice(resendingIndex + 1);
+    followingMessages.forEach((msg) => deleteMessage(msg.id));
+
     let userMessage: ChatMessage | undefined;
     let botMessage: ChatMessage | undefined;
 
