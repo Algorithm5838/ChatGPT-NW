@@ -820,6 +820,8 @@ function _Chat() {
       return;
     }
 
+    session.messages.slice(resendingIndex + 1).forEach(msg => deleteMessage(msg.id));
+
     let userMessage: ChatMessage | undefined;
     let botMessage: ChatMessage | undefined;
 
