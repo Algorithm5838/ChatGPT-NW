@@ -98,7 +98,15 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
   {
+    name: "gpt-4",
+    available: true,
+  },
+  {
     name: "gpt-4-1106-preview",
+    available: true,
+  },
+  {
+    name: "gpt-3.5-turbo",
     available: true,
   },
   {
