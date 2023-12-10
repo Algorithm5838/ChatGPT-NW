@@ -113,6 +113,18 @@ export const DEFAULT_MODELS = [
     name: "gpt-3.5-turbo-1106",
     available: true,
   },
+    {
+    name: "alpindale/goliath-120b",
+    available: true,
+  },
+  {
+    name: "lizpreciatior/lzlv-70b-fp16-hf",
+    available: true,
+  },
+  {
+    name: "perplexity/pplx-70b-online",
+    available: true,
+  },
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
