@@ -125,6 +125,10 @@ export const DEFAULT_MODELS = [
     name: "perplexity/pplx-70b-online",
     available: true,
   },
+  {
+    name: "mistralai/mixtral-8x7b-instruct",
+    available: true,
+  },
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
