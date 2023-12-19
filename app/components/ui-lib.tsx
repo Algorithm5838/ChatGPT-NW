@@ -268,6 +268,7 @@ export function PasswordInput(props: HTMLProps<HTMLInputElement>) {
       />
       <input
         {...props}
+        dir="auto"
         type={visible ? "text" : "password"}
         className={"password-input"}
       />
@@ -361,6 +362,7 @@ function PromptInput(props: {
       value={input}
       onInput={(e) => onInput(e.currentTarget.value)}
       rows={props.rows ?? 3}
+      dir="auto"
     ></textarea>
   );
 }
