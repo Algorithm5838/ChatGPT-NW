@@ -122,11 +122,15 @@ export const DEFAULT_MODELS = [
     available: true,
   },
   {
-    name: "perplexity/pplx-70b-online",
+    name: "mistralai/mixtral-8x7b-instruct",
     available: true,
   },
   {
-    name: "mistralai/mixtral-8x7b-instruct",
+    name: "nousresearch/nous-capybara-34b",
+    available: true,
+  },
+  {
+    name: "perplexity/pplx-70b-online",
     available: true,
   },
 ] as const;
