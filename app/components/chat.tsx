@@ -818,7 +818,6 @@ function _Chat() {
       console.error("[Chat] failed to find resending message", message);
       return;
     }
-
     session.messages.slice(resendingIndex + 1).forEach(msg => deleteMessage(msg.id));
 
     let userMessage: ChatMessage | undefined;
@@ -1298,6 +1297,7 @@ function _Chat() {
             style={{
               fontSize: config.fontSize,
             }}
+            dir="auto"
           />
           <IconButton
             icon={<SendWhiteIcon />}
