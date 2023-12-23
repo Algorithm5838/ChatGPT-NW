@@ -7,6 +7,7 @@ import { createEmptyMask, Mask } from "./mask";
 import {
   DEFAULT_INPUT_TEMPLATE,
   DEFAULT_SYSTEM_TEMPLATE,
+  OPENAI_SYSTEM_TEMPLATE,
   KnowledgeCutOffDate,
   StoreKey,
   SUMMARIZE_MODEL,
@@ -385,7 +386,7 @@ export const useChatStore = createPersistStore(
                 role: "system",
                 content: fillTemplateWith("", {
                   ...modelConfig,
-                  template: DEFAULT_SYSTEM_TEMPLATE,
+                  template: modelConfig.model.startsWith('gpt') ? OPENAI_SYSTEM_TEMPLATE : DEFAULT_SYSTEM_TEMPLATE,
                 }),
               }),
             ]
