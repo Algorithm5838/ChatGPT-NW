@@ -79,7 +79,8 @@ export const Azure = {
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
-export const DEFAULT_SYSTEM_TEMPLATE = `
+export const DEFAULT_SYSTEM_TEMPLATE = `You are a helpful assistant.`;
+export const OPENAI_SYSTEM_TEMPLATE = `
 You are ChatGPT, a large language model trained by OpenAI.
 Knowledge cutoff: {{cutoff}}
 Current model: {{model}}
