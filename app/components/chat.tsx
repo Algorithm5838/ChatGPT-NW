@@ -396,8 +396,8 @@ function useScrollToBottom(
     const dom = scrollRef.current;
     if (dom) {
       requestAnimationFrame(() => {
-        setAutoScroll(true);
-        dom.scrollTo({ top: dom.scrollHeight, behavior: 'smooth' });
+        //setAutoScroll(true);
+        dom.scrollTo(0, dom.scrollHeight);
       });
     }
   }
@@ -407,7 +407,7 @@ function useScrollToBottom(
     if (autoScroll && !detach) {
       scrollDomToBottom();
     }
-  }, [autoScroll, detach]);
+  });
 
   return {
     scrollRef,
