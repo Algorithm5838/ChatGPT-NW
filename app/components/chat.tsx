@@ -392,7 +392,7 @@ function useScrollToBottom(
   // for auto-scroll
 
   const [autoScroll, setAutoScroll] = useState(true);
-  const scrollDomToBottom = useCallback(() => {
+  function scrollDomToBottom() {
     const dom = scrollRef.current;
     if (dom) {
       requestAnimationFrame(() => {
@@ -400,14 +400,14 @@ function useScrollToBottom(
         dom.scrollTo({ top: dom.scrollHeight, behavior: 'smooth' });
       });
     }
-  }, [scrollRef]);
+  }
 
   // auto scroll
   useEffect(() => {
     if (autoScroll && !detach) {
       scrollDomToBottom();
     }
-  }, [autoScroll, detach, scrollDomToBottom]);
+  }, [autoScroll, detach]);
 
   return {
     scrollRef,
