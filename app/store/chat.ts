@@ -113,7 +113,7 @@ function fillTemplateWith(input: string, modelConfig: ModelConfig) {
     ServiceProvider: serviceProvider,
     cutoff,
     model: modelConfig.model,
-    time: new Date().toString(),
+    time: new Date().toLocaleString(),
     lang: getLang(),
     input: input,
   };
