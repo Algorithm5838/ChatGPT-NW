@@ -107,7 +107,7 @@ export const DEFAULT_SYSTEM_TEMPLATE = `
 You are a helpful assistant.
 `;
 
-export const SUMMARIZE_MODEL = "mistralai/mixtral-8x7b-instruct:nitro";
+export const SUMMARIZE_MODEL = "microsoft/wizardlm-2-8x22b";
 export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
