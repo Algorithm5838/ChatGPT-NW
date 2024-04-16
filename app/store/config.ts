@@ -53,7 +53,7 @@ export const DEFAULT_CONFIG = {
     presence_penalty: 0,
     frequency_penalty: 0,
     sendMemory: false,
-    historyMessageCount: 64,
+    historyMessageCount: Infinity,
     compressMessageLengthThreshold: 1000,
     enableInjectSystemPrompts: true,
     template: DEFAULT_INPUT_TEMPLATE,
@@ -83,7 +83,7 @@ export const ModalConfigValidator = {
     return x as ModelType;
   },
   max_tokens(x: number) {
-    return limitNumber(x, 1, 32768, 4096);
+    return limitNumber(x, 1, Infinity, 4096);
   },
   presence_penalty(x: number) {
     return limitNumber(x, -2, 2, 0);
