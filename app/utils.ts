@@ -292,10 +292,13 @@ export function isVisionModel(model: string) {
     "claude-3",
     "gemini-1.5-pro",
     "gemini-pro-1.5",
+    "gpt-4-turbo",
     "gpt-4o",
   ];
+  const isGpt4TurboPreview = model === "gpt-4-turbo-preview";
 
-  const isGpt4Turbo = model.includes("gpt-4-turbo") && !model.includes("preview");
-
-  return visionKeywords.some((keyword) => model.includes(keyword)) || isGpt4Turbo;
+  return (
+    visionKeywords.some((keyword) => model.includes(keyword)) &&
+    !isGpt4TurboPreview
+  );
 }
